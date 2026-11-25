@@ -1,0 +1,5 @@
+#home{max-width:none;margin:0;padding:0;overflow:hidden;position:relative;background:#fff}
+.stage{position:absolute;left:0;top:0;width:1536px;height:1024px;transform-origin:0 0;font-family:"Segoe UI",Arial,sans-serif;overflow:hidden}
+.a{position:absolute;white-space:nowrap}.btn{cursor:pointer}.stage img{display:block}
+#bar{position:fixed;top:6px;right:8px;z-index:99;color:#fff;background:#041a4dcc;padding:4px 10px;border-radius:8px;font-size:.85rem}
+#bar:has(#bOut[hidden]){display:none}
