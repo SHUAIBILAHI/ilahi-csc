@@ -1,0 +1,20 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ILAHI Computer Center – Common Service Center</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1><b>ILAHI</b> COMPUTER CENTER</h1><small>Common Service Center</small></header>
+<nav><span id="who">Digital Seva, Sabke Liye</span><button id="bHome" class="ghost">Home</button><button id="bLogin" class="ghost">Login / Sign up</button><button id="bOut" class="ghost" hidden>Logout</button></nav>
+
+<section id="home"><div class="hero"><div><h2>Your Trusted Partner for <em>Digital Services</em></h2><p>One Center, Many Services – For a Digital India. Aadhaar, PAN, Passport, Certificates sab ek jagah.</p><button onclick="show('auth')">Apply Online</button></div>
+<div class="card" style="color:var(--ink)"><b>Our Address</b><p>Main Bazar, Town – Chhaprauli, Tehsil – Baraut, District – Baghpat, UP, 250617<br>📞 7579811587 · ✉ ilahicomputer20@gmail.com</p></div></div>
+<h3>Hamari Services</h3><div class="grid" id="pubServices"></div></section>
+
+<section id="auth" hidden><div class="grid"><form class="card" id="fLogin"><h3>Login</h3><label>Mobile / Username</label><input name="mobile" required><label>Password</label><input name="password" type="password" required><button>Login</button></form>
+<form class="card" id="fReg"><h3>New User? Sign up</h3><label>Full Name</label><input name="name" required><label>Mobile (10 digit)</label><input name="mobile" pattern="\d{10}" required><label>Email (optional)</label><input name="email" type="email"><label>Password (min 6)</label><input name="password" type="password" minlength="6" required><button>Create account</button></form></div></section>
+
+<section id="user" hidden><h2>Services</h2><div class="grid" id="svc"></div>
+<h2>My Applications</h2><div class="card"><input id="trk" placeholder="Application ID se track karein (ILC-2026-xxxxxx)" style="max-width:380px"> <button onclick="loadUser(trk.value)">Track</button></div><br><div class="tw"><table><thead><tr><th>Application ID</th><th>Service</th><th>Applied On</th><th>Status</th><th>Remarks</th></tr></thead><tbody id="mine"></tbody></table></div></section>
+
+<section id="admin" hidden><h2>Admin Dashboard</h2><div class="stats" id="stats"></div><h3>Application Management</h3><div class="tw"><table><thead><tr><th>ID</th><th>Customer</th><th>Service</th><th>Details</th><th>Doc</th><th>Status</th><th>Action</th></tr></thead><tbody id="apps"></tbody></table></div></section>
+
+<dialog id="dlg"><form id="fApply"><h3 id="dT"></h3><input type="hidden" name="serviceId"><label>Details (jaise puraana / naya naam, DOB)</label><textarea name="details" rows="4" required></textarea><label>Document (JPG/PNG/PDF, max 2MB)</label><input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf"><label><input type="checkbox" required style="width:auto"> Main ghoshit karta/karti hoon ki jaankari sahi hai.</label><br><br><button>Submit Application</button> <button type="button" class="ghost" onclick="dlg.close()">Cancel</button></form></dialog>
+<div id="toast" hidden></div>
+<footer>© 2025 ILAHI COMPUTER CENTER · Digital Seva, Sabke Liye</footer><script src="app.js"></script></body></html>
