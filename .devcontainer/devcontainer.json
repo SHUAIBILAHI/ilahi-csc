@@ -1,0 +1,9 @@
+{
+  "name": "Ilahi CSC",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": { "ghcr.io/devcontainers/features/java:1": { "version": "17", "installMaven": "true" } },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "sudo service mariadb start",
+  "forwardPorts": [8080],
+  "portsAttributes": { "8080": { "label": "Ilahi CSC", "onAutoForward": "openBrowser" } }
+}
